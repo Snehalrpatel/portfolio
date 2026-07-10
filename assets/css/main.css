@@ -68,15 +68,15 @@ section {
   scroll-margin-top: 90px; /* header height ke approx */
 }
 
-body {
+
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
 }
-
-a {
-  color: var(--accent-color);
-  text-decoration: none;
   transition: 0.3s;
 }
 
