@@ -9,11 +9,17 @@
   // Replace contact@example.com with your real receiving email address
   $receiving_email_address = 'contact@example.com';
 
-  if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
-    include( $php_email_form );
-  } else {
-    die( 'Unable to load the "PHP Email Form" Library!');
-  }
+// Check whether the PHP Email Form library file exists
+if (file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php')) {
+
+    // Include the library if the file is available
+    include($php_email_form);
+
+} else {
+
+    // Stop script execution and display an error if the library is missing
+    die('Unable to load the "PHP Email Form" Library!');
+}
 
   $contact = new PHP_Email_Form;
   $contact->ajax = true;
